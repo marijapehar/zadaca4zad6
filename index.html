@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS osnove</title>
+</head>
+<body>
+  <script type="text/javascript">
+	document.write("<hr/>");
+	document.write("Zadatak 6 rezultat: <br/>");
+	var polje = new Array(1, 2, 3, 4, 7, 8, 5, 6, 9, 55, 74, 11, 33);
+
+    document.write("<br/>a) Dužina polja: " + polje.length + "<br/><br/>");
+    var sortiranoMax = [...polje].sort(function(a, b) { return b - a; });
+    document.write("b) Sortirano od najvećeg ka najmanjem: " + sortiranoMax.join(", ") + "<br/><br/>");
+    var sortiranoMin = [...polje].sort(function(a, b) { return a - b; });
+    document.write("c) Sortirano od najmanjeg ka najvećem: " + sortiranoMin.join(", ") + "<br/><br/>");
+    sortiranoMin.pop();
+    document.write("d) Nakon uklanjanja zadnjeg člana: " + sortiranoMin.join(", ") + "<br/><br/>");
+    sortiranoMin.push(19, 22);
+    document.write("e) Nakon dodavanja 19 i 22: " + sortiranoMin.join(", ") + "<br/><br/>");
+    var polje2 = ["Banana", "Orange", "Apple", "Mango"];
+    var polje_final = sortiranoMin.concat(polje2);
+    document.write("f) Spojeno polje (polje_final): " + polje_final.join(" | "));
+  </script>
+</body>
+</html>
